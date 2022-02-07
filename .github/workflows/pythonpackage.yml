@@ -49,6 +49,6 @@ jobs:
               pwd && \
               ls && \
               python3 -m pip install --upgrade pip && \
-              python3 -m pip install -r requirements.txt && \
+              apt-get install python3-icu && \
               pytest -m "not requires_network" && \
               deactivate'

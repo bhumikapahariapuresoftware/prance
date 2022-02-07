@@ -50,6 +50,8 @@ jobs:
               ls && \
               python3 -m pip install --upgrade pip && \
               pip install pytest && \
+              apt-get install pkg-config libicu-dev && \
+              pip install --no-binary=:pyicu: pyicu && \
               pip install -r requirements.txt && \
               pytest -m "not requires_network" && \
               deactivate'
